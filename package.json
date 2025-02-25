@@ -3,14 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://garciar316.github.io/fenix-rugmy-app",
+  "homepage": "https://garciar316.github.io/fenix-rugby-app",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist -r https://github.com/garciar316/fenix-rugby-app.git"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
