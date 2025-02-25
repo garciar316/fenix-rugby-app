@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavButton } from '~/components/atoms';
+import { NavButton } from '../../atoms';
 
 interface NavItemsProps {
     items: string[];

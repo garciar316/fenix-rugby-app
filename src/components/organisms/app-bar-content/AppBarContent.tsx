@@ -2,9 +2,9 @@ import React from 'react';
 import { Box, IconButton, Typography, Menu, MenuItem, Button, Toolbar } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import { Logo } from '~/components/atoms';
-import { AccountMenu, NavItems } from '~/components/molecules';
 import type { RefObject } from 'react';
+import { Logo } from '../../atoms';
+import { AccountMenu, NavItems } from '../../molecules';
 
 interface AppBarContentProps {
     navItems: string[];
@@ -39,7 +39,7 @@ const AppBarContent: React.FC<AppBarContentProps> = ({
                 <MenuIcon />
             </IconButton>
             <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}>
-                <Logo src="/public/FENIX-01.png" alt="Logo" />
+                <Logo src="FENIX-01.png" alt="Logo" />
                 <Typography
                     variant="h6"
                     component="div"

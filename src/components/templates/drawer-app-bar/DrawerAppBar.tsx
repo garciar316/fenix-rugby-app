@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, CssBaseline, AppBar, Drawer } from '@mui/material';
-import { AppBarContent, DrawerContent } from '~/components/organisms';
+import { AppBarContent, DrawerContent } from '../../organisms';
 
 interface Props {
     window?: () => Window;
