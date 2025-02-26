@@ -25,10 +25,6 @@ const AccountMenu: React.FC = () => {
         setAnchorEl(null);
     };
 
-    const handleLogin = () => {
-        setIsLogged(true);
-    };
-
     const handleLogout = () => {
         setIsLogged(false);
     };
