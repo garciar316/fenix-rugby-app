@@ -40,7 +40,7 @@ function DrawerAppBar(props: Readonly<Props>) {
     return (
         <Box sx={{ display: 'flex' }}>
             <CssBaseline />
-            <AppBar component="nav" position="fixed">
+            <AppBar component="nav" position="fixed" sx={{backgroundColor: '#006d9b'}}>
                 <AppBarContent
                     navItems={navItems}
                     teamCategories={teamCategories}

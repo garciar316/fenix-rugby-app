@@ -1,3 +1,4 @@
+import { PermIdentity } from '@mui/icons-material';
 import Logout from '@mui/icons-material/Logout';
 import Settings from '@mui/icons-material/Settings';
 import Avatar from '@mui/material/Avatar';
@@ -27,6 +28,10 @@ const AccountMenu: React.FC = () => {
         setIsLogged(true);
     };
 
+    const handleLogout = () => {
+        setIsLogged(false);
+    };
+
     return (
         <React.Fragment>
             {isLogged ? (
@@ -43,8 +48,14 @@ const AccountMenu: React.FC = () => {
                     </IconButton>
                 </Tooltip>
             ) : (
-                <Button onClick={handleLogin} sx={{ ml: 2 }} variant="contained" color="primary">
-                    Ingresar
+                <Button
+                    onClick={handleLogin}
+                    sx={{ ml: 2, color: 'white', borderColor: 'white' }}
+                    variant="outlined"
+                    color="primary"
+                    startIcon={<PermIdentity />}
+                >
+                    Acceder
                 </Button>
             )}
             <Menu
@@ -94,7 +105,7 @@ const AccountMenu: React.FC = () => {
                     </ListItemIcon>
                     Opciones
                 </MenuItem>
-                <MenuItem onClick={handleClose}>
+                <MenuItem onClick={handleLogout}>
                     <ListItemIcon>
                         <Logout fontSize="small" />
                     </ListItemIcon>
