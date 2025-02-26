@@ -1,27 +1,15 @@
+import { AppBar, Box, CssBaseline, Drawer } from '@mui/material';
 import React from 'react';
-import { Box, CssBaseline, AppBar, Drawer } from '@mui/material';
-import { AppBarContent, DrawerContent } from '../../organisms';
-import NavItemModel from '../../../models/NavItemModel';
+import RouteElements from '../../../routes/main.routes';
+import AppBarContent from '../../organisms/app-bar-content/AppBarContent';
+import DrawerContent from '../../organisms/drawer-content/DrawerContent';
 
 interface Props {
     window?: () => Window;
 }
 
 const drawerWidth = 240;
-const navItems: NavItemModel[] = [
-    {
-        text: 'Inicio',
-        path: 'inicio'
-    },
-    {
-        text: 'Nosotros',
-        path: 'nosotros'
-    },
-    {
-        text: 'Contacto',
-        path: 'contacto'
-    }
-];
+
 const teamCategories = ['Categoria A', 'Categoria B'];
 
 function DrawerAppBar(props: Readonly<Props>) {
@@ -54,9 +42,9 @@ function DrawerAppBar(props: Readonly<Props>) {
     return (
         <Box sx={{ display: 'flex' }}>
             <CssBaseline />
-            <AppBar component="nav" position="fixed" sx={{backgroundColor: '#006d9b'}}>
+            <AppBar component="nav" position="fixed" sx={{ backgroundColor: '#006d9b' }}>
                 <AppBarContent
-                    navItems={navItems}
+                    navItems={RouteElements}
                     teamCategories={teamCategories}
                     handleDrawerToggle={handleDrawerToggle}
                     anchorEl={anchorEl}
@@ -84,7 +72,11 @@ function DrawerAppBar(props: Readonly<Props>) {
                         },
                     }}
                 >
-                    <DrawerContent navItems={navItems} teamCategories={teamCategories} />
+                    <DrawerContent
+                        navItems={RouteElements}
+                        teamCategories={teamCategories}
+                        handleDrawerToggle={handleDrawerToggle}
+                    />
                 </Drawer>
             </Box>
         </Box>

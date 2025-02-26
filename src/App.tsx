@@ -1,10 +1,11 @@
 import { Suspense } from 'react'
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import './App.css'
-import AboutPage from './components/pages/about/About'
-import ContactPage from './components/pages/contact/Contact'
+import RouteElements from './routes/main.routes'
 import HomePage from './components/pages/home/HomePage'
-import { DrawerAppBar } from './components/templates'
+import UsersRouteElements from './routes/users.routes'
+import DrawerAppBar from './components/templates/drawer-app-bar/DrawerAppBar'
+
 
 function App() {
 
@@ -14,10 +15,16 @@ function App() {
       <Suspense fallback={<h2>Cargando...</h2>}>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/fenix-rugby-app" element={<HomePage />} />
-          <Route path="/inicio" element={<HomePage />} />
-          <Route path="/nosotros" element={<AboutPage />} />
-          <Route path="/contacto" element={<ContactPage />} />
+          {
+            RouteElements.map((route) => (
+              <Route key={route.text} path={route.path} element={route.page} />
+            ))
+          }
+          {
+            UsersRouteElements.map((route) => (
+              <Route key={route.text} path={route.path} element={route.page} />
+            ))
+          }
         </Routes>
       </Suspense>
     </Router>

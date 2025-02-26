@@ -7,9 +7,10 @@ import { Link } from 'react-router-dom';
 interface DrawerContentProps {
     navItems: NavItemModel[];
     teamCategories: string[];
+    handleDrawerToggle: () => void;
 }
 
-const DrawerContent: React.FC<DrawerContentProps> = ({ navItems, teamCategories }) => {
+const DrawerContent: React.FC<DrawerContentProps> = ({ navItems, teamCategories, handleDrawerToggle }) => {
     return (
         <Box sx={{ textAlign: 'center' }}>
             <Typography variant="h6" sx={{ my: 2 }}>
@@ -19,7 +20,12 @@ const DrawerContent: React.FC<DrawerContentProps> = ({ navItems, teamCategories 
             <List>
                 {navItems.map((item) => (
                     <ListItem key={item.path} disablePadding>
-                        <ListItemButton component={Link} to={item.path} sx={{ textAlign: 'left' }}>
+                        <ListItemButton
+                            component={Link}
+                            to={item.path}
+                            onClick={handleDrawerToggle}
+                            sx={{ textAlign: 'left' }}
+                        >
                             <ListItemText primary={item.text} />
                         </ListItemButton>
                     </ListItem>

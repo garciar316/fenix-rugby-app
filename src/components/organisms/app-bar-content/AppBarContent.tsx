@@ -3,9 +3,10 @@ import { Box, IconButton, Typography, Menu, MenuItem, Button, Toolbar } from '@m
 import MenuIcon from '@mui/icons-material/Menu';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import type { RefObject } from 'react';
-import { Logo } from '../../atoms';
-import { AccountMenu, NavItems } from '../../molecules';
 import NavItemModel from '../../../models/NavItemModel';
+import Logo from '../../atoms/logo/Logo';
+import NavItems from '../../molecules/nav-item/NavItems';
+import AccountMenu from '../../molecules/account-menu/AccountMenu';
 
 interface AppBarContentProps {
     navItems: NavItemModel[];
@@ -40,7 +41,7 @@ const AppBarContent: React.FC<AppBarContentProps> = ({
                 <MenuIcon />
             </IconButton>
             <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}>
-                <Logo src="fenix-rugby-app/FENIX-01.png" alt="Logo" />
+                <Logo src="FENIX-01.png" alt="Logo" />
                 <Typography
                     variant="h6"
                     component="div"

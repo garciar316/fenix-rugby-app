@@ -10,6 +10,7 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Tooltip from '@mui/material/Tooltip';
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 
 const AccountMenu: React.FC = () => {
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -49,7 +50,8 @@ const AccountMenu: React.FC = () => {
                 </Tooltip>
             ) : (
                 <Button
-                    onClick={handleLogin}
+                    component={Link}
+                    to={"login"}
                     sx={{ ml: 2, color: 'white', borderColor: 'white' }}
                     variant="outlined"
                     color="primary"

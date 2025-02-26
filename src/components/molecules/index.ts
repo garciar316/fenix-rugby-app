@@ -1,2 +1,2 @@
-export { default as AccountMenu } from './account-menu/AccountMenu';
-export { default as NavItems } from './nav-item/NavItems';
+export * from './account-menu/AccountMenu';
+export * from './nav-item/NavItems';
