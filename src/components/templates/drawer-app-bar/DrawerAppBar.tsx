@@ -1,13 +1,27 @@
 import React from 'react';
 import { Box, CssBaseline, AppBar, Drawer } from '@mui/material';
 import { AppBarContent, DrawerContent } from '../../organisms';
+import NavItemModel from '../../../models/NavItemModel';
 
 interface Props {
     window?: () => Window;
 }
 
 const drawerWidth = 240;
-const navItems = ['Inicio', 'Nosotros', 'Contacto'];
+const navItems: NavItemModel[] = [
+    {
+        text: 'Inicio',
+        path: 'inicio'
+    },
+    {
+        text: 'Nosotros',
+        path: 'nosotros'
+    },
+    {
+        text: 'Contacto',
+        path: 'contacto'
+    }
+];
 const teamCategories = ['Categoria A', 'Categoria B'];
 
 function DrawerAppBar(props: Readonly<Props>) {

@@ -1,1 +1,3 @@
-export { default as HomePage } from './home/HomePage';
+export * from './about/About';
+export * from './contact/Contact';
+export * from './home/HomePage';

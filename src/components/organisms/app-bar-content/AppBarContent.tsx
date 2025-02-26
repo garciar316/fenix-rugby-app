@@ -5,9 +5,10 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import type { RefObject } from 'react';
 import { Logo } from '../../atoms';
 import { AccountMenu, NavItems } from '../../molecules';
+import NavItemModel from '../../../models/NavItemModel';
 
 interface AppBarContentProps {
-    navItems: string[];
+    navItems: NavItemModel[];
     teamCategories: string[];
     handleDrawerToggle: () => void;
     anchorEl: HTMLElement | null;

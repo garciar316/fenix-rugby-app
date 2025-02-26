@@ -1,9 +1,11 @@
 import React from 'react';
 import { Box, List, ListItem, ListItemButton, ListItemText, Accordion, AccordionSummary, AccordionDetails, Typography, Divider } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import NavItemModel from '../../../models/NavItemModel';
+import { Link } from 'react-router-dom';
 
 interface DrawerContentProps {
-    navItems: string[];
+    navItems: NavItemModel[];
     teamCategories: string[];
 }
 
@@ -16,9 +18,9 @@ const DrawerContent: React.FC<DrawerContentProps> = ({ navItems, teamCategories 
             <Divider />
             <List>
                 {navItems.map((item) => (
-                    <ListItem key={item} disablePadding>
-                        <ListItemButton sx={{ textAlign: 'left' }}>
-                            <ListItemText primary={item} />
+                    <ListItem key={item.path} disablePadding>
+                        <ListItemButton component={Link} to={item.path} sx={{ textAlign: 'left' }}>
+                            <ListItemText primary={item.text} />
                         </ListItemButton>
                     </ListItem>
                 ))}
