@@ -1,6 +1,6 @@
 import { ChevronLeft, ChevronRight } from "@mui/icons-material";
 import { Box, IconButton, Paper, styled, Tooltip, useMediaQuery, useTheme } from "@mui/material";
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 
 const CarouselWrapper = styled(Box)(() => ({
     display: 'flex',
@@ -56,7 +56,6 @@ const LogoCarousel = () => {
 
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isPaused, setIsPaused] = useState(false);
-    const interval = useRef<NodeJS.Timeout>();
 
     const logos = [
         {
@@ -120,7 +119,7 @@ const LogoCarousel = () => {
     };
 
     useEffect(() => {
-        let interval;
+        let interval: string | number | NodeJS.Timeout | undefined;
         if (!isPaused) {
             interval = setInterval(() => {
                 handleNextClick();
