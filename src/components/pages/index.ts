@@ -1,4 +1,4 @@
-export * from './about/AboutPage';
-export * from './contact/ContactPage';
-export * from './home/HomePage';
-export * from './login/LoginPage';
+export { default as AboutPage } from './about/AboutPage';
+export { default as ContactPage } from './contact/ContactPage';
+export { default as HomePage } from './home/HomePage';
+export { default as LoginPage } from './login/LoginPage';

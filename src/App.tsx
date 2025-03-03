@@ -1,33 +1,44 @@
-import { Suspense } from 'react'
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import './App.css'
-import RouteElements from './routes/main.routes'
-import HomePage from './components/pages/home/HomePage'
-import UsersRouteElements from './routes/users.routes'
-import DrawerAppBar from './components/templates/drawer-app-bar/DrawerAppBar'
+import { Footer } from '@/components/organisms'
+import { HomePage } from '@/components/pages'
+import { DrawerAppBar } from '@/components/templates'
+import { RouteElements, UsersRouteElements } from '@/routes'
+import { createTheme, CssBaseline, ThemeProvider } from '@mui/material'
+import React, { Suspense } from 'react'
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 
+const theme = createTheme({
+  palette: {
+    background: {
+      default: "rgb(0, 0, 45)"
+    }
+  }
+})
 
 function App() {
-
   return (
-    <Router >
-      <DrawerAppBar />
-      <Suspense fallback={<h2>Cargando...</h2>}>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          {
-            RouteElements.map((route) => (
-              <Route key={route.text} path={route.path} element={route.page} />
-            ))
-          }
-          {
-            UsersRouteElements.map((route) => (
-              <Route key={route.text} path={route.path} element={route.page} />
-            ))
-          }
-        </Routes>
-      </Suspense>
-    </Router>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Router >
+        <DrawerAppBar />
+        <Suspense fallback={<h2>Cargando...</h2>}>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            {
+              RouteElements.map((route) => (
+                <Route key={route.text} path={route.path} element={route.page} />
+              ))
+            }
+            {
+              UsersRouteElements.map((route) => (
+                <Route key={route.text} path={route.path} element={route.page} />
+              ))
+            }
+          </Routes>
+        </Suspense>
+      </Router>
+      <Footer />
+    </ThemeProvider>
   )
 }
 

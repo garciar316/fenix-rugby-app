@@ -1,3 +1,4 @@
+import React from "react";
 import AboutPage from "../components/pages/about/AboutPage";
 import ContactPage from "../components/pages/contact/ContactPage";
 import HomePage from "../components/pages/home/HomePage";

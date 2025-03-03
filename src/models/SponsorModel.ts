@@ -1,7 +1,9 @@
 interface Sponsor {
-    name: string,
-    description: string,
-    image: string
+  id: number;
+  name: string;
+  logo: string;
+  website?: string;
+  description?: string;
 }
 
 export default Sponsor;

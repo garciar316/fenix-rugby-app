@@ -1,8 +1,7 @@
 import { AppBar, Box, CssBaseline, Drawer } from '@mui/material';
 import React from 'react';
-import RouteElements from '../../../routes/main.routes';
-import AppBarContent from '../../organisms/app-bar-content/AppBarContent';
-import DrawerContent from '../../organisms/drawer-content/DrawerContent';
+import { RouteElements } from '@/routes';
+import { AppBarContent, DrawerContent } from '@/components/organisms';
 
 interface Props {
     window?: () => Window;
@@ -40,9 +39,9 @@ function DrawerAppBar(props: Readonly<Props>) {
     const container = window !== undefined ? () => window().document.body : undefined;
 
     return (
-        <Box sx={{ display: 'flex' }}>
+        <Box sx={{ display: 'flex', height: "65px" }}>
             <CssBaseline />
-            <AppBar component="nav" position="fixed" sx={{ backgroundColor: '#006d9b' }}>
+            <AppBar component="nav" position="fixed" sx={{ backgroundColor: 'rgb(0, 0, 45)', borderBottom: '1px groove grey' }}>
                 <AppBarContent
                     navItems={RouteElements}
                     teamCategories={teamCategories}

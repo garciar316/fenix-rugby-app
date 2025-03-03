@@ -1,6 +1,6 @@
 import React from 'react';
-import NavItemModel from '../../../models/NavItemModel';
-import NavButton from '../../atoms/nav-button/NavButton';
+import { NavItemModel } from '@/models';
+import { NavButton } from '@/components/atoms';
 
 interface NavItemsProps {
     items: NavItemModel[];

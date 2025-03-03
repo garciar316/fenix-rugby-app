@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, List, ListItem, ListItemButton, ListItemText, Accordion, AccordionSummary, AccordionDetails, Typography, Divider } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import NavItemModel from '../../../models/NavItemModel';
+import { NavItemModel } from '@/models';
 import { Link } from 'react-router-dom';
 
 interface DrawerContentProps {

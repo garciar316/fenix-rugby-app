@@ -1,2 +1,2 @@
-export * from './NavItemModel';
-export * from './SponsorModel';
+export { default as NavItemModel } from './NavItemModel';
+export { default as SponsorModel } from './SponsorModel';
