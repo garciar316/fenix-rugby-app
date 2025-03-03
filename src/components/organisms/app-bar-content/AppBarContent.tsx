@@ -40,7 +40,7 @@ const AppBarContent: React.FC<AppBarContentProps> = ({
                 <MenuIcon />
             </IconButton>
             <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}>
-                <Logo src="/FENIX-01.png" alt="Logo" />
+                <Logo src="FENIX-01.png" alt="Logo" />
                 <Typography
                     variant="h6"
                     component="div"

@@ -53,7 +53,7 @@ const AboutPage = () => {
                                 alignItems: "center"
                             }}
                         >
-                            <ContentImage source={'/content/image-05.jpg'} alt={''} />
+                            <ContentImage source={'content/image-05.jpg'} alt={''} />
                         </Grid>
                         <Grid
                             flexDirection={'column'}
@@ -111,7 +111,7 @@ const AboutPage = () => {
                                 alignItems: "center"
                             }}
                         >
-                            <ContentImage source={'/content/image-06.jpg'} alt={''} />
+                            <ContentImage source={'content/image-06.jpg'} alt={''} />
                         </Grid>
                     </Grid>
                 </Box>

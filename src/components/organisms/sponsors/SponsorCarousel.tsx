@@ -61,31 +61,31 @@ const LogoCarousel = () => {
         {
             id: 1,
             name: "Alberto Alvarez",
-            url: "/sponsors/alberto-alvarez.png",
+            url: "sponsors/alberto-alvarez.png",
             link: "https://albertoalvarez.com/"
         },
         {
             id: 2,
             name: "Santiago Villada",
-            url: "/sponsors/santiago-villada.png",
+            url: "sponsors/santiago-villada.png",
             link: "https://www.instagram.com/sv_seguros/"
         },
         {
             id: 3,
             name: "Miel de Sandía",
-            url: "/sponsors/miel-de-sandia.png",
+            url: "sponsors/miel-de-sandia.png",
             link: "#"
         },
         {
             id: 4,
             name: "Maderas & Proyectos",
-            url: "/sponsors/maderas-y-proyectos-2.png",
+            url: "sponsors/maderas-y-proyectos-2.png",
             link: "#"
         },
         {
             id: 5,
             name: "Team Box",
-            url: "/sponsors/team-box.png",
+            url: "sponsors/team-box.png",
             link: "#"
         }
     ];
