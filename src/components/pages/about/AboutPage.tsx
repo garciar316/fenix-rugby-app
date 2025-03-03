@@ -2,7 +2,6 @@ import { ContentImage, LayoutContainer } from '@/components/atoms';
 import { SponsorCarousel, SportsLine } from '@/components/organisms';
 import { Box, Divider, Typography } from '@mui/material';
 import Grid from '@mui/material/Grid2';
-import React from 'react';
 
 const AboutPage = () => {
     return (

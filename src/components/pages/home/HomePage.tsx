@@ -1,6 +1,5 @@
 import { SponsorCarousel } from "@/components/organisms";
 import { Typography } from "@mui/material";
-import React from "react";
 
 const HomePage = () => {
     return (

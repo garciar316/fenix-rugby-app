@@ -1,11 +1,11 @@
-import './App.css'
 import { Footer } from '@/components/organisms'
 import { HomePage } from '@/components/pages'
 import { DrawerAppBar } from '@/components/templates'
 import { RouteElements, UsersRouteElements } from '@/routes'
 import { createTheme, CssBaseline, ThemeProvider } from '@mui/material'
-import React, { Suspense } from 'react'
+import { Suspense } from 'react'
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
+import './App.css'
 
 const theme = createTheme({
   palette: {

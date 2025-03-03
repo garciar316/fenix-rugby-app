@@ -1,8 +1,8 @@
 import { ChevronLeft, ChevronRight } from "@mui/icons-material";
 import { Box, IconButton, Paper, styled, Tooltip, useMediaQuery, useTheme } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
-const CarouselWrapper = styled(Box)(({ theme }) => ({
+const CarouselWrapper = styled(Box)(() => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -56,6 +56,7 @@ const LogoCarousel = () => {
 
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isPaused, setIsPaused] = useState(false);
+    const interval = useRef<NodeJS.Timeout>();
 
     const logos = [
         {
@@ -128,12 +129,12 @@ const LogoCarousel = () => {
         return () => clearInterval(interval);
     }, [isPaused]);
 
-    const handleLogoClick = (link) => {
+    const handleLogoClick = (link: string) => {
         window.open(link, "_blank");
     };
 
-    const handleImageError = (e) => {
-        e.target.src = "https://images.unsplash.com/photo-1557683316-973673baf926";
+    const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+        e.currentTarget.src = "https://images.unsplash.com/photo-1557683316-973673baf926";
     };
 
     return (

@@ -1,5 +1,5 @@
-import { Card, CardActionArea, CardMedia, CardContent, Typography } from "@mui/material";
-import React, { ReactNode } from "react";
+import { Card, CardActionArea, CardContent, CardMedia, Typography } from "@mui/material";
+import { ReactNode } from "react";
 
 interface Props {
     image: string;

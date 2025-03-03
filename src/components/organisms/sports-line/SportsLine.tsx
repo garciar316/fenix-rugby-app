@@ -1,7 +1,6 @@
-import { Diversity2, EmojiEvents, FitnessCenter, SportsRugby, SportsRugbyTwoTone } from "@mui/icons-material";
+import { Diversity2, EmojiEvents, FitnessCenter, SportsRugby } from "@mui/icons-material";
 import { Box, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid2";
-import React from "react";
 
 function SportsLine() {
     const items = [
