@@ -6,7 +6,7 @@
   "homepage": "https://garciar316.github.io/fenix-rugby-app",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
